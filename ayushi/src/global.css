@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ROOT */
+
+:root{
+
+  /* BACKGROUND */
+
+  --bg:#060816;
+
+  --bg2:#0f172a;
+
+  --bg3:#111827;
+
+  /* CARD */
+
+  --card:
+    rgba(17,25,40,0.72);
+
+  --card2:
+    rgba(30,41,59,0.65);
+
+  /* COLORS */
+
+  --violet:#8b5cf6;
+
+  --violet2:#c084fc;
+
+  --cyan:#06b6d4;
+
+  --cyan2:#67e8f9;
+
+  --blue:#3b82f6;
+
+  --pink:#ec4899;
+
+  --white:#f8fafc;
+
+  --muted:#94a3b8;
+
+  /* BORDER */
+
+  --border:
+    rgba(255,255,255,0.08);
+
+  --border2:
+    rgba(139,92,246,0.25);
+
+  /* SHADOW */
+
+  --shadow:
+    0 10px 40px rgba(0,0,0,0.35);
+
+  --shadow2:
+    0 10px 30px rgba(6,182,212,0.18);
+
+  /* GRADIENT */
+
+  --gradient:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #06b6d4
+    );
+
+  --gradient2:
+    linear-gradient(
+      135deg,
+      #c084fc,
+      #67e8f9
+    );
+
+  /* RADIUS */
+
+  --radius:24px;
+
+  --radius-sm:16px;
+
+  /* FONTS */
+
+  --font-display:
+    'Outfit',
+    sans-serif;
+
+  --font-body:
+    'Poppins',
+    sans-serif;
+}
+
+/* HTML */
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* BODY */
+
+body{
+
+  font-family:
+    var(--font-body);
+
+  background:
+
+    radial-gradient(
+      circle at top left,
+      rgba(139,92,246,0.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(6,182,212,0.14),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      to bottom,
+      var(--bg),
+      var(--bg2)
+    );
+
+  color:
+    var(--white);
+
+  overflow-x:hidden;
+
+  line-height:1.9;
+
+  font-size:16px;
+
+  font-weight:400;
+
+  letter-spacing:0.01em;
+}
+
+/* CURSOR GLOW */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  width:420px;
+  height:420px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,0.10),
+      transparent 70%
+    );
+
+  top:-120px;
+  left:-120px;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  filter:blur(80px);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  width:7px;
+}
+
+::-webkit-scrollbar-track{
+  background:var(--bg);
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:
+    linear-gradient(
+      var(--violet),
+      var(--cyan)
+    );
+
+  border-radius:999px;
+}
+
+/* SELECTION */
+
+::selection{
+
+  background:
+    rgba(139,92,246,0.28);
+
+  color:white;
+}
+
+/* IMAGE */
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* LINKS */
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* SECTION */
+
+section{
+
+  padding:120px 7%;
+
+  position:relative;
+}
+
+/* LABEL */
+
+.section-label{
+
+  display:inline-block;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid var(--border);
+
+  backdrop-filter:blur(10px);
+
+  font-size:0.78rem;
+
+  font-weight:600;
+
+  letter-spacing:0.24em;
+
+  text-transform:uppercase;
+
+  color:var(--cyan2);
+
+  margin-bottom:1rem;
+}
+
+/* TITLE */
+
+.section-title{
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(2.8rem,6vw,4.8rem);
+
+  font-weight:700;
+
+  line-height:1.08;
+
+  margin-bottom:1rem;
+
+  color:var(--white);
+
+  letter-spacing:-0.03em;
+}
+
+.section-title .accent{
+
+  color:var(--violet2);
+}
+
+.section-title .accent2{
+
+  color:var(--cyan2);
+}
+
+/* DIVIDER */
+
+.divider{
+
+  width:74px;
+
+  height:4px;
+
+  border-radius:999px;
+
+  background:
+    var(--gradient);
+
+  margin-bottom:3rem;
+}
+
+/* BUTTON PRIMARY */
+
+.btn-primary{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:15px 38px;
+
+  border-radius:999px;
+
+  border:none;
+
+  background:
+    var(--gradient);
+
+  color:white;
+
+  font-size:0.95rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(6,182,212,0.22);
+}
+
+.btn-primary:hover{
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 38px rgba(6,182,212,0.28);
+}
+
+/* BUTTON OUTLINE */
+
+.btn-outline{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:14px 38px;
+
+  border-radius:999px;
+
+  border:
+    1.5px solid rgba(139,92,246,0.35);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  backdrop-filter:blur(12px);
+
+  color:var(--white);
+
+  font-size:0.95rem;
+
+  font-weight:500;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.btn-outline:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    var(--cyan);
+
+  background:
+    rgba(6,182,212,0.08);
+
+  color:var(--cyan2);
+}
+
+/* CARD */
+
+.card{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.02)
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    var(--radius);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  box-shadow:
+    var(--shadow);
+}
+
+.card:hover{
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(6,182,212,0.25);
+
+  box-shadow:
+    0 18px 45px rgba(6,182,212,0.12);
+}
+
+/* PREMIUM GLOW */
+
+.glow{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  z-index:0;
+}
+
+.glow-purple{
+
+  width:340px;
+  height:340px;
+
+  background:
+    rgba(139,92,246,0.16);
+
+  top:-120px;
+  left:-120px;
+}
+
+.glow-cyan{
+
+  width:320px;
+  height:320px;
+
+  background:
+    rgba(6,182,212,0.14);
+
+  bottom:-120px;
+  right:-120px;
+}
+
+/* TEXT */
+
+p{
+  color:#cbd5e1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  section{
+    padding:95px 6%;
+  }
+
+  .section-title{
+
+    font-size:
+      clamp(2.4rem,7vw,4rem);
+  }
+}
+
+@media(max-width:768px){
+
+  body{
+    font-size:15px;
+  }
+
+  section{
+    padding:80px 5%;
+  }
+
+  .section-title{
+    font-size:2.4rem;
+  }
+
+  .btn-primary,
+  .btn-outline{
+    width:100%;
+  }
+}
+
+@media(max-width:480px){
+
+  .section-title{
+    font-size:2rem;
+  }
+
+  .divider{
+    width:55px;
+  }
+}
