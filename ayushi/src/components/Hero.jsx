@@ -1,19 +1,17 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./Hero.css";
-
 import profileImg from "../assets/Photo.jpg";
 
 export default function Hero() {
-
   return (
     <section className="hero" id="home">
 
-      {/* BACKGROUND GLOW */}
+      {/* Background Glow */}
       <div className="hero-glow glow1"></div>
       <div className="hero-glow glow2"></div>
 
-      {/* LEFT CONTENT */}
+      {/* Left Content */}
       <div className="hero-content">
 
         <p className="hero-tag">
@@ -25,14 +23,13 @@ export default function Hero() {
           <span> Ayushi Kumari</span>
         </h1>
 
-        {/* TYPING TEXT */}
+        {/* Typing Animation */}
         <h2 className="typing-text">
-
           <Typewriter
             words={[
               "React Developer",
               "Frontend Engineer",
-              "Full stack developer",
+              "Full Stack Developer",
             ]}
             loop={true}
             cursor
@@ -41,59 +38,61 @@ export default function Hero() {
             deleteSpeed={50}
             delaySpeed={1500}
           />
-
         </h2>
 
-        {/* DESCRIPTION */}
+        {/* Description */}
         <p className="hero-description">
-          Passionate Frontend Developer skilled in
-          React.js, JavaScript, and modern UI/UX design.
-          I create responsive and interactive web
-          applications with clean user experiences.
+          Passionate Frontend Developer skilled in React.js,
+          JavaScript, and modern UI/UX design. I create
+          responsive and interactive web applications with
+          clean and engaging user experiences.
         </p>
 
-        {/* BUTTONS */}
+        {/* Buttons */}
         <div className="hero-buttons">
 
-          <a href="#projects">
-            <button className="primary-btn">
-              View Projects
-            </button>
+          {/* Projects */}
+          <a
+            href="#projects"
+            className="primary-btn"
+          >
+            View Projects
           </a>
 
-          <a href="#contact">
-            <button className="secondary-btn">
-              Contact Me
-            </button>
+          {/* Contact */}
+          <a
+            href="#contact"
+            className="secondary-btn"
+          >
+            Contact Me
           </a>
 
-          {/* RESUME BUTTON */}
+          {/* Resume Download */}
           <a
             href="/resume.pdf"
-            download="resume.pdf"
+            download="Ayushi-Kumari-Resume.pdf"
+            className="resume-btn"
           >
-            <button className="resume-btn">
-              Download Resume
-            </button>
+            Download Resume
           </a>
 
         </div>
 
-        {/* SCROLL */}
+        {/* Scroll Down */}
         <div className="scroll-down">
           Scroll Down ↓
         </div>
 
       </div>
 
-      {/* RIGHT IMAGE */}
+      {/* Right Image */}
       <div className="hero-image-section">
 
         <div className="image-circle">
 
           <img
             src={profileImg}
-            alt="Ayushi"
+            alt="Ayushi Kumari"
           />
 
         </div>
